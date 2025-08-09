@@ -29,7 +29,7 @@ export default function Contact() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -60,7 +60,7 @@ export default function Contact() {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm font-medium text-green-800">
-                      Thank you for your message! We'll get back to you soon.
+                      Thank you for your message! We&apos;ll get back to you soon.
                     </p>
                   </div>
                 </div>

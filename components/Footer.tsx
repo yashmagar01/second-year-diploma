@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// Link import removed as it's not being used
 
 export default function Footer() {
   return (

@@ -58,8 +58,8 @@ export default function About() {
             <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
               <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <p className="text-sm text-gray-900">
-                  We're a diverse team of developers, designers, and problem-solvers who are passionate about 
-                  creating high-quality software that makes a difference in people's lives.
+                  We&apos;re a diverse team of developers, designers, and problem-solvers who are passionate about 
+                  creating high-quality software that makes a difference in people&apos;s lives.
                 </p>
               </div>
             </div>
