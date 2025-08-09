@@ -18,7 +18,7 @@ export default function About() {
             <div className="px-4 py-5 sm:px-6">
               <h2 className="text-lg leading-6 font-medium text-gray-900">Our Story</h2>
               <p className="mt-1 max-w-2xl text-sm text-gray-500">
-                How we got started and where we're going.
+                How we got started and where we&apos;re going.
               </p>
             </div>
             <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
