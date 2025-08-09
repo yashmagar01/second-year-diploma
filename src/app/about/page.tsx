@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BookOpen, Code, Cpu, GitBranch, MapPin, Target } from 'lucide-react';
+import { BookOpen, Code, GitBranch, MapPin, Target } from 'lucide-react';
 
 export default function About() {
   const fadeInUp = {
@@ -152,7 +152,7 @@ export default function About() {
             {/* Personal Note */}
             <motion.div variants={fadeInUp} className="bg-slate-50 p-6 rounded-lg border border-slate-200">
               <p className="text-slate-700 italic">
-                "When I'm not coding, you'll probably find me watching Marvel movies, jotting down weird project ideas, or figuring out new ways to explain a concept so that even my non-tech friends can get it."
+                &quot;When I&apos;m not coding, you&apos;ll probably find me watching Marvel movies, jotting down weird project ideas, or figuring out new ways to explain a concept so that even my non-tech friends can get it.&quot;
               </p>
             </motion.div>
 
