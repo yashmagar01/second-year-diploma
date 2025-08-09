@@ -1,87 +1,107 @@
-import Link from 'next/link';
+'use client';
+
+import { FaCode, FaDatabase, FaLaptopCode, FaProjectDiagram } from 'react-icons/fa';
+
+const subjects = [
+  {
+    title: 'Data Structure using C',
+    icon: <FaProjectDiagram className="w-12 h-12 text-blue-500 mb-4" />,
+    description: 'Master fundamental data structures and algorithms implemented in C language.'
+  },
+  {
+    title: 'OOP in C++',
+    icon: <FaLaptopCode className="w-12 h-12 text-green-500 mb-4" />,
+    description: 'Learn Object-Oriented Programming concepts and design patterns using C++.'
+  },
+  {
+    title: 'DBMS',
+    icon: <FaDatabase className="w-12 h-12 text-purple-500 mb-4" />,
+    description: 'Explore database design, SQL, and data management principles.'
+  },
+  {
+    title: 'Computer Graphics',
+    icon: <FaCode className="w-12 h-12 text-yellow-500 mb-4" />,
+    description: 'Dive into 2D/3D graphics programming and visualization techniques.'
+  }
+];
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-            Welcome to PoShow
-          </h1>
-          <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            A modern Next.js project with Tailwind CSS
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">My Diploma Coding Journey</h1>
+          <p className="text-xl md:text-2xl opacity-90">
+            Showcasing practicals and learning in Data Structures, OOP, DBMS, and CG
           </p>
-          <div className="mt-10 flex justify-center gap-4">
-            <Link 
-              href="/about"
-              className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
-            >
-              Learn More
-            </Link>
-            <Link 
-              href="/contact"
-              className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
-            >
-              Contact Us
-            </Link>
+        </div>
+      </section>
+
+      {/* Subject Cards */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Explore My Subjects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {subjects.map((subject, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+              >
+                <div className="flex flex-col items-center text-center">
+                  {subject.icon}
+                  <h3 className="text-xl font-semibold mb-2">{subject.title}</h3>
+                  <p className="text-gray-600">{subject.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="mt-20">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Feature 1 */}
-            <div className="pt-6">
-              <div className="flow-root bg-white rounded-lg px-6 pb-8 shadow">
-                <div className="-mt-6">
-                  <div className="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="mt-4 text-lg font-medium text-gray-900">Lightning Fast</h3>
-                  <p className="mt-2 text-base text-gray-500">
-                    Built with Next.js for optimal performance and fast page loads.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="pt-6">
-              <div className="flow-root bg-white rounded-lg px-6 pb-8 shadow">
-                <div className="-mt-6">
-                  <div className="inline-flex items-center justify-center p-3 bg-green-500 rounded-md shadow-lg">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                    </svg>
-                  </div>
-                  <h3 className="mt-4 text-lg font-medium text-gray-900">Modern UI</h3>
-                  <p className="mt-2 text-base text-gray-500">
-                    Beautiful, responsive design with Tailwind CSS.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="pt-6">
-              <div className="flow-root bg-white rounded-lg px-6 pb-8 shadow">
-                <div className="-mt-6">
-                  <div className="inline-flex items-center justify-center p-3 bg-purple-500 rounded-md shadow-lg">
-                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
-                  <h3 className="mt-4 text-lg font-medium text-gray-900">Secure</h3>
-                  <p className="mt-2 text-base text-gray-500">
-                    Built with security and performance in mind.
-                  </p>
-                </div>
-              </div>
+      {/* About Me Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Hello! I&apos;m a passionate computer science student currently pursuing my diploma. 
+                I have a strong interest in software development, algorithms, and problem-solving. 
+                This portfolio showcases my journey through various computer science subjects and 
+                the projects I&apos;ve worked on during my academic career.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                When I&apos;m not coding, you can find me exploring new technologies, contributing to 
+                open-source projects, or sharing my knowledge with fellow students. I believe in 
+                continuous learning and applying theoretical knowledge to solve real-world problems.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-8">My Mission</h2>
+            <div className="bg-blue-50 rounded-lg p-8 border-l-4 border-blue-500">
+              <p className="text-gray-700 leading-relaxed mb-6">
+                My mission is to master the fundamentals of computer science and apply them to 
+                create meaningful solutions. I aim to develop a strong foundation in data structures, 
+                algorithms, and software engineering principles that will enable me to tackle complex 
+                challenges in the tech industry.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Through this portfolio, I want to document my learning journey, showcase my projects, 
+                and demonstrate my growth as a developer. I believe in the power of sharing knowledge 
+                and hope that my work can inspire and help others in their learning journey as well.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
