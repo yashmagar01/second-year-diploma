@@ -1,0 +1,30 @@
+{
+  "name": "root",
+  "type": "folder",
+  "children": [
+    {
+      "name": "Lab Manual Codes",
+      "type": "folder",
+      "children": [
+        {
+          "name": "Stack Operations",
+          "type": "file",
+          "output": "Push: 10, Pop: 10\nStack is empty now.",
+          "code": "#include <stdio.h>\nint main(){\n  // stack implementation here\n  return 0;\n}"
+        }
+      ]
+    },
+    {
+      "name": "Self Study",
+      "type": "folder",
+      "children": [
+        {
+          "name": "Binary Search",
+          "type": "file",
+          "output": "Enter number: 8 found at position 3",
+          "code": "#include <stdio.h>\nint main(){\n  // binary search implementation\n  return 0;\n}"
+        }
+      ]
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import { Suspense } from 'react';
 import { FileNode, FolderData } from '@/types/subject';
 
 // Import the sample data directly
-import sampleData from '@/data/subjects/data-structure-sample.json';
+import sampleData from '@/data/subjects/sample-data.json';
 
 // Dynamically import the SubjectPage component with no SSR
 const SubjectPage = dynamic(
