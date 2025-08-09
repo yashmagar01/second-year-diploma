@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">Yash's Portfolio</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Yash&apos;s Portfolio</h3>
             <p className="text-slate-400">
               A showcase of my diploma projects, practicals, and learning in Computer Engineering.
             </p>
@@ -110,7 +110,7 @@ export default function Footer() {
         
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400 text-sm mb-4 md:mb-0">
-            © {currentYear} Yash's Portfolio. All rights reserved.
+            © {currentYear} Yash&apos;s Portfolio. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="text-slate-400 hover:text-emerald-400 text-sm transition-colors">

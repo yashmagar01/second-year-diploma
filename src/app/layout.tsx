@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -10,6 +10,14 @@ const inter = Inter({
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-inter",
+});
+
+// Load Poppins font with specific weights
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -27,15 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={`${inter.className} font-sans antialiased bg-white text-slate-800`}>
+      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-white text-slate-800`}>
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">

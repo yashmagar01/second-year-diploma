@@ -1,7 +1,6 @@
 "use client";
 
 import { 
-  ArrowDown, 
   Code, 
   Database, 
   GitBranch, 
@@ -72,7 +71,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-xl text-indigo-100 mb-8"
               >
-                A complete showcase of my practicals, code, and learning in Computer Engineering.
+                A complete showcase of my practicals,I&apos;m committed to continuous learning in Computer Engineering.
               </motion.p>
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -118,7 +117,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">Subjects I've Worked On</h2>
+            <h2 className="text-3xl font-bold text-slate-800 mb-4">Subjects I&apos;ve Worked On</h2>
             <div className="w-20 h-1 bg-emerald-500 mx-auto"></div>
           </motion.div>
           
@@ -166,7 +165,7 @@ export default function Home() {
               </div>
               <div className="md:w-2/3">
                 <p className="text-slate-700 leading-relaxed mb-6">
-                  I'm Yash, a Computer Engineering diploma student passionate about coding, problem-solving, and building practical solutions. This website is my living archive of code, projects, and experiments from my diploma journey.
+                  I&apos;m a passionate Computer Engineering diploma student passionate about coding, problem-solving, and building practical solutions. This website is my living archive of code, projects, and experiments from my diploma journey.
                 </p>
                 <div className="mb-6">
                   <h4 className="font-semibold text-slate-800 mb-3">Skills & Technologies:</h4>
